@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AtmaFellow Search</title>
+  <style>
+    body {
+      background-color: #202124;
+      color: white;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    h1 {
+      font-size: 80px;
+      font-weight: bold;
+      margin-bottom: 30px;
+      color: white;
+    }
+
+    .searchh-box {
+      display: flex;
+      align-items: center;
+      background-color: #303134;
+      border-radius: 24px;
+      padding: 10px 20px;
+      width: 500px;
+      max-width: 90%;
+    }
+
+    .searchh-box input {
+      flex: 1;
+      background: none;
+      border: none;
+      outline: none;
+      font-size: 18px;
+      color: white;
+    }
+
+    .buttonsi {
+      margin-top: 30px;
+    }
+
+    .buttons button {
+      background-color: #303134;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin: 5px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .buttons button:hover {
+      background-color: #3c4043;
+    }
+  </style>
+</head>
+<body>
+  <h1>AtmaFellow</h1>
+
+  <div class="searchh-box">
+    <input type="text" id="searchBox" placeholder="Cari UKM...">
+  </div>
+
+  <div class="buttonsi">
+    <button onclick="searchPage()">Cari UKM</button>
+    <button onclick="feelingLucky()">I'm Feeling Lucky</button>
+  </div>
+
+  <script>
+    const pages = [
+      { title: "AIKIDO", url: "Aikido.html" },
+      { title: "Basketball", url: "basket.html" },
+      { title: "Tari", url: "tari.html" },
+      { title: "Football", url: "football.html" },
+      { title: "Photography", url: "photo.html" },
+      { title: "Volleyball", url: "volley.html" }
+    ];
+
+    function searchPage() {
+      const query = document.getElementById("searchBox").value.toLowerCase();
+      const result = pages.find(p => p.title.toLowerCase().includes(query));
+
+      if (result) {
+        window.location.href = result.url;
+      } else {
+        alert("❌ UKM tidak ditemukan!");
+      }
+    }
+
+    function feelingLucky() {
+      const random = pages[Math.floor(Math.random() * pages.length)];
+      window.location.href = random.url;
+    }
+
+    // biar bisa tekan Enter juga
+    document.getElementById("searchBox").addEventListener("keypress", function(event) {
+      if (event.key === "Enter") {
+        searchPage();
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini Game</title>
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #f0f0f0;
+      font-family: Arial, sans-serif;
+    }
+
+    .game {
+      width: 600px;
+      height: 200px;
+      background: #fff;
+      border: 2px solid #000;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #character {
+      width: 50px;
+      height: 50px;
+      background: url("char.png") no-repeat center/cover; /* Replace with your PNG */
+      position: absolute;
+      bottom: 0;
+      left: 50px;
+    }
+
+    #obstacle {
+      width: 40px;
+      height: 40px;
+      background: url("cactus.png") no-repeat center/cover; /* Replace with obstacle PNG */
+      position: absolute;
+      bottom: 0;
+      right: -40px;
+      animation: move 2s infinite linear;
+    }
+
+    @keyframes move {
+      0% { right: -40px; }
+      100% { right: 100%; }
+    }
+
+    .jump {
+      animation: jump 0.5s ease-out;
+    }
+
+    @keyframes jump {
+      0% { bottom: 0; }
+      50% { bottom: 80px; }
+      100% { bottom: 0; }
+    }
+
+    .score {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="game">
+    <div id="character"></div>
+    <div id="obstacle"></div>
+    <div class="score">Score: <span id="score">0</span></div>
+  </div>
+
+  <script>
+    const character = document.getElementById("character");
+    const obstacle = document.getElementById("obstacle");
+    const scoreText = document.getElementById("score");
+    let score = 0;
+    let isJumping = false;
+
+    document.addEventListener("keydown", function(event) {
+      if (event.code === "Space" && !isJumping) {
+        jump();
+      }
+    });
+
+    function jump() {
+      isJumping = true;
+      character.classList.add("jump");
+      setTimeout(() => {
+        character.classList.remove("jump");
+        isJumping = false;
+      }, 500);
+    }
+
+    setInterval(() => {
+      let charTop = parseInt(window.getComputedStyle(character).getPropertyValue("bottom"));
+      let obsLeft = parseInt(window.getComputedStyle(obstacle).getPropertyValue("right"));
+
+      // Collision detection
+      if (obsLeft < 600 - 50 && obsLeft > 600 - 90 && charTop <= 40) {
+        alert("Game Over! Your score: " + score);
+        score = 0;
+        scoreText.textContent = score;
+      } else {
+        score++;
+        scoreText.textContent = score;
+      }
+    }, 100);
+  </script>
+</body>
+</html>

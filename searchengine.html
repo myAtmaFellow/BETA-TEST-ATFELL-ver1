@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>UAJY Search Engine</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 40px; }
+    input { padding: 8px; width: 300px; }
+    button { padding: 8px 12px; margin-left: 5px; }
+  </style>
+</head>
+<body>
+  <h2>🔎 Cari UKM UAJY</h2>
+  <input type="text" id="searchBox" placeholder="Ketik nama UKM...">
+  <button onclick="searchPage()">Go</button>
+
+  <script>
+    // Index daftar halaman
+    const pages = {
+      "aikido": "Aikido.html",
+      "basketball": "basket.html",
+      "tari": "tari.html",
+      "football": "football.html",
+      "photography": "photo.html",
+      "uapy photography club": "photo.html",
+      "volleyball": "volley.html"
+      // bisa tambahin semua UKM di sini
+    };
+
+    function searchPage() {
+      const query = document.getElementById("searchBox").value.toLowerCase();
+      if (pages[query]) {
+        // langsung pindah ke halaman
+        window.location.href = pages[query];
+      } else {
+        alert("❌ UKM tidak ditemukan!");
+      }
+    }
+  </script>
+</body>
+</html>

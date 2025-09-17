@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus Hub</title>
+
+  <!-- Google Font: Montserrat -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: #0C2D5C;
+;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr); /* 4 per row */
+      gap: 25px;
+      padding: 30px;
+      text-align: center;
+    }
+
+    .item {
+      background: #f9f9f9;
+      border-radius: 15px;
+      padding: 20px 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      cursor: pointer;
+    }
+
+    .item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.12);
+    }
+
+    .item img {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 8px;
+      border-radius: 15px; /* curved square */
+    object-fit: cover;   /* keeps proportion, no squish */
+    background: #f2f2f2; /* optional: background behind transparent icons */
+    padding: 10px;  
+    }
+
+    .item p {
+      margin: 0;
+      font-weight: 600;
+      color: #333;
+      font-size: 0.95em;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="item" onclick="goTo('Aikido.html')"><img src="Aikido.png"><p>AIKIDO</p></div>
+    <div class="item" onclick="goTo('photo.html')"><img src="Photo .png"><p>UAJY PHOTOGRAPHY CLUB</p></div>
+    <div class="item" onclick="goTo('Basket.html')"><img src="Basket.png"><p>BASKETBALL</p></div>
+    <div class="item" onclick="goTo('Ctc.html')"><img src="Cycle.png"><p>CTC ENGLISH DEBATE</p></div>
+    <div class="item" onclick="goTo('Diving.html')"><img src="Diving.png"><p>DIVING</p></div>
+    <div class="item" onclick="goTo('Football.html')"><img src="Ft.png"><p>FOOTBALL</p></div>
+    <div class="item" onclick="goTo('Haikido.html')"><img src="Hap.png"><p>HAPKIDO</p></div>
+    <div class="item" onclick="goTo('Inkai.html')"><img src="Inkai.png"><p>INKAI</p></div>
+    <div class="item" onclick="goTo('KOMA.html')"><img src="Kop.png"><p>KOPERASI MAHASISWA</p></div>
+    <div class="item" onclick="goTo('Kreativitas.html')"><img src="Kreatif .png"><p>KREATIVITAS MAHASISWA</p></div>
+    <div class="item" onclick="goTo('Kyo.html')"><img src="Kyle.png"><p>KYOKUSHINKAI</p></div>
+    <div class="item" onclick="goTo('March.html')"><img src="March.png"><p>MARCHING BAND</p></div>
+    <div class="item" onclick="goTo('Merpati.html')"><img src="Mer.png"><p>MERPATI PUTIH</p></div>
+    <div class="item" onclick="goTo('PALAWA.html')"><img src="Paula.jpg"><p>PALAWA</p></div>
+    <div class="item" onclick="goTo('PASKAWIJAYA.html')"><img src="Paskawijaya.png"><p>PASKAWIJAYA</p></div>
+<div class="item" onclick="goTo('SENI.html')"><img src="Sb.png"><p>SENI BUDAYA NUSANTARA</p></div>
+    <div class="item" onclick="goTo('Student.html')"><img src="Student.png"><p>STUDENT CHOIR</p></div>
+    <div class="item" onclick="goTo('SWI.html')"><img src="Swi.png"><p>SWI PRO PATRIA</p></div>
+    <div class="item" onclick="goTo('swim.html')"><img src="Swik.png"><p>SWIMMING</p></div>
+    <div class="item" onclick="goTo('Tae.html')"><img src="Task.png"><p>TAEKWONDO</p></div>
+    <div class="item" onclick="goTo('Tarung.html')"><img src="Teddy.png"><p>TARUNG DERAJAT</p></div>
+    <div class="item" onclick="goTo('Teather.html')"><img src="Li.png"><p>TEATER LILIN</p></div>
+    <div class="item" onclick="goTo('Tennis.html')"><img src="Tennis.png"><p>TENNIS</p></div>
+    <div class="item" onclick="goTo('Unisec.html')"><img src="Uni.png"><p>UNISEC</p></div>
+    <div class="item" onclick="goTo('Volley.html')"><img src="Volle.png"><p>VOLLEYBALL</p></div>
+    <div class="item" onclick="goTo('UAJY.html')"><img src="Ua.png"><p>UAJY MOVEMENT</p></div>
+    <div class="item" onclick="goTo('Formasi.html')"><img src="For ask.png"><p>FORMASI</p></div>
+    <div class="item" onclick="goTo('Joy.html')"><img src="Joy.png"><p>JOY FELLOWSHIP</p></div>
+    <div class="item" onclick="goTo('Kamadhis.html')"><img src="ka.png"><p>KAMADHIS</p></div>
+    <div class="item" onclick="goTo('KMHD.html')"><img src="Km.png"><p>KMHD MAHATMA</p></div>
+    <div class="item" onclick="goTo('LCU.html')"><img src="Hi.png"><p>LEADERS COMMUNITY</p></div>
+    <div class="item" onclick="goTo('LBM.html')"><img src="Le.png"><p>LEMABAGA BELAJAR MAHASISWA</p></div>
+    <div class="item" onclick="goTo('Misa.html')"><img src="Misa.png"><p>MISA KAMPUS</p></div>
+    <div class="item" onclick="goTo('PD.html')"><img src="Pic.png"><p>PD MISSIO DEI</p></div>
+    <div class="item" onclick="goTo('PMK.html')"><img src="Pms.png"><p>PMK MELISIA CHRISTI</p></div>
+    <div class="item" onclick="goTo('PSSB.html')"><img src="Pssb .png"><p>PSSB</p></div>
+    <div class="item" onclick="goTo('Tari.html')"><img src="Tati.png"><p>TARI</p></div>
+  </div>
+
+  <script>
+    function goTo(url) {
+      window.location.href = url;
+    }
+  </script>
+
+</body>
+</html>
