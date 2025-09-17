@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus Hub</title>
+
+  <!-- Google Font: Montserrat -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+
+     :root{ --accent: #f4b400; --card-radius: 12px; }
+    *{ box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background:
+        linear-gradient(rgba(12,45,92,0.45), rgba(26,90,160,0.45)),
+        url('UAJY.png') no-repeat center center fixed;
+      background-size: cover;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+      gap: 60px; /* 🔥 more space between sections */
+    }
+
+    h1 {
+      color: #fff;
+      font-weight: 700;
+      margin: 0 0 24px;
+      letter-spacing: 2px;
+      font-size: 32px;
+    }
+
+.containeri {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr); /* 4 per row */
+      gap: 25px;
+      padding: 30px;
+      text-align: center;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1000px;
+      display: flex;
+      border-radius: var(--card-radius);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+      overflow: hidden;
+      background: #fff;
+    }
+
+
+    .item {
+      background: #f9f9f9;
+      border-radius: 15px;
+      padding: 20px 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      cursor: pointer;
+    }
+
+    .item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.12);
+    }
+
+    .item img {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 8px;
+      border-radius: 15px; /* curved square */
+    object-fit: cover;   /* keeps proportion, no squish */
+    background: #f2f2f2; /* optional: background behind transparent icons */
+    padding: 10px;  
+    }
+
+    .item p {
+      margin: 0;
+      font-weight: 600;
+      color: #333;
+      font-size: 0.95em;
+    }
+
+
+/* Section 1: Portal */
+    .info-box {
+      flex: 1;
+      padding: 30px;
+      color: #222;
+      background: #fff;
+    }
+    .button-box {
+      flex: 1;
+      padding: 36px;
+      background: var(--accent);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 10px;
+    }
+    .button-box h2 { text-align: center; margin: 0 0 14px; }
+
+    .btn {
+      width: 100%;
+      padding: 12px 14px;
+      border-radius: 8px;
+      border: none;
+      font-weight: 600;
+      cursor: pointer;
+      background: #fff;
+      color: #222;
+      transition: 0.2s;
+    }
+    .btn:hover { transform: translateY(-3px); }
+
+    /* Section 2: Org Info */
+    .left { flex: 2; display: flex; flex-direction: column; }
+    .thumbnail img {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+    }
+    .info { padding: 25px; line-height: 1.6; font-size: 15px; flex-grow: 1; }
+
+    .right {
+      flex: 1;
+      background: #faf6ed;
+      padding: 25px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .button {
+      display: block;
+      margin: 10px 0;
+      padding: 12px 20px;
+      text-align: center;
+      background: #fff;
+      border: 2px solid #0d4a7a;
+      border-radius: 6px;
+      width: 80%;
+      font-weight: bold;
+      color: #0d4a7a;
+      transition: 0.3s;
+      text-decoration: none;
+    }
+    .button:hover { background: #0d4a7a; color: #fff; }
+
+ /* Section 3: Video */
+    .media-box {
+      flex: 1;
+      background: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      aspect-ratio: 1/1;
+    }
+    .media-box video,
+    .media-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .content-box {
+      flex: 2;
+      padding: 25px;
+      line-height: 1.6;
+      font-size: 15px;
+    }
+/* Section 3: Video */
+    .media-box {
+      flex: 1;
+      background: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      aspect-ratio: 1/1;
+    }
+    .media-box video,
+    .media-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .content-box {
+      flex: 2;
+      padding: 25px;
+      line-height: 1.6;
+      font-size: 15px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Section 3 -->
+  <div class="container">
+    <div class="media-box">
+      <video autoplay muted loop>
+        <source src="Vid.mov" type="video/mp4">
+        Your browser does not support video.
+      </video>
+    </div>
+    <div class="content-box">
+      <h2>About Our Organization</h2>
+      <p>Heyy 👋 welcome!
+Honestly, this page feels best if you open it on your laptop or iPad, biar enak diliat and gampang dipakai.
+
+This isn’t some random page, it’s something we made for UAJY with a lot of love ❤️, late-night ideas, and of course… powered by Indomie 🍜 (ya namanya juga anak kampus hehe).
+
+Hope you enjoy looking around here, because it’s made simple, warm, and from the heart — just like how we live our days at UAJY ✨.</p>
+    </div>
+  </div>
+<h1>Aplication</h1>
+  <div class="container">
+  <div class="containeri">
+    <div class="item" onclick="goTo('https://siatma.uajy.ac.id')"><img src="2.jpg"><p>SIATMA</p></div>
+    <div class="item" onclick="goTo('https://siakad.uajy.ac.id')"><img src="8.jpg"><p>SIAKAD</p></div>
+    <div class="item" onclick="goTo('https://kuliah.uajy.ac.id')"><img src="a.jpg"><p>WEB KULIAH</p></div>
+    <div class="item" onclick="goTo('https://sikma.uajy.ac.id')"><img src="6.PNG"><p>SIKMA</p></div>
+    <div class="item" onclick="goTo('https://bookshelf.vitalsource.com/')"><img src="e.PNG"><p>Bookshelf</p></div>
+    <div class="item" onclick="goTo('ukm.html')"><img src="Y.png"><p>UKM UAJY</p></div>
+    <div class="item" onclick="goTo('Fbe.html')"><img src="O.png"><p>UKF Fakultas Bisnis dan Ekonomi</p></div>
+    <div class="item" onclick="goTo('Fbe.html')"><img src="l.JPG"><p>UKF Fakultas Teknologi Industri</p></div>
+    <div class="item" onclick="goTo('sema.html')"><img src="0.jpg"><p>UKF Fakultas Hukum</p></div>
+    <div class="item" onclick="goTo('bpm.html')"><img src="5.JPG"><p>UKF Fakultas Teknik</p></div>
+    <div class="item" onclick="goTo('library.html')"><img src="9.png"><p>UKF Fakultas TeknoBiologi</p></div>
+    <div class="item" onclick="goTo('portal.html')"><img src="Z.png"><p>UKF Fakultas Ilmu Sosial dan Ilmu Politik</p></div>
+    <div class="item" onclick="goTo('news.html')"><img src="N.png"><p>News</p></div>
+    <div class="item" onclick="goTo('events.html')"><img src="V.jpg"><p>Lembaga</p></div>
+    <div class="item" onclick="goTo('helpdesk.html')"><img src="M 3.png"><p>Map</p></div>
+  </div>
+</div>
+</div>
+<!-- Section 1 -->
+  <h1>About us</h1>
+  <div class="container">
+    <div class="info-box">
+      <h3>About this Idea</h3>
+      <p>Ultras Rossoneri Ezra Prasetya
+Faculty of Business and Management Economics
+Student ID (NPM): 250328846
+
+I created this 5-in-1 website to integrate Bookshelf, SIAKAD, SIATMA, SIKMA, and Web Kuliah into a single platform. The purpose is to simplify access, improve efficiency, and save time for students by gathering all essential academic systems in one page. This idea comes from my personal initiative as a student who values practicality and productivity in managing academic activities.</p>
+    </div>
+    <div class="button-box">
+      <h2>Our Socials</h2>
+      <button class="btn" onclick="goTo('https://bookshelf.vitalsource.com/')">Ezra</button>
+      <button class="btn" onclick="goTo('https://siakad.uajy.ac.id')">Ares</button>
+      <button class="btn" onclick="goTo('https://siatma.uajy.ac.id')">Zhita</button>
+      <button class="btn" onclick="goTo('https://kuliah.uajy.ac.id')">Pedro</button>
+      <button class="btn" onclick="goTo('https://sikma.uajy.ac.id')">Silpi</button>
+    </div>
+  </div>
+</div>
+  <script>
+    function goTo(url) {
+      window.location.href = url;
+    }
+  </script>
+
+</body>
+</html>

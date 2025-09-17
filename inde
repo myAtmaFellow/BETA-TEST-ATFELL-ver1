@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>UAJY FBE</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{ --accent: #f4b400; --card-radius: 12px; }
+    *{ box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background:
+        linear-gradient(rgba(12,45,92,0.45), rgba(26,90,160,0.45)),
+        url('UAJY.png') no-repeat center center fixed;
+      background-size: cover;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+      gap: 120px; /* 🔥 more space between sections */
+    }
+
+    h1 {
+      color: #fff;
+      font-weight: 700;
+      margin: 0 0 24px;
+      letter-spacing: 2px;
+      font-size: 32px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1000px;
+      display: flex;
+      border-radius: var(--card-radius);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+      overflow: hidden;
+      background: #fff;
+    }
+
+    /* Section 1: Portal */
+    .info-box {
+      flex: 1;
+      padding: 30px;
+      color: #222;
+      background: #fff;
+    }
+    .button-box {
+      flex: 1;
+      padding: 36px;
+      background: var(--accent);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 10px;
+    }
+    .button-box h2 { text-align: center; margin: 0 0 14px; }
+
+    .btn {
+      width: 100%;
+      padding: 12px 14px;
+      border-radius: 8px;
+      border: none;
+      font-weight: 600;
+      cursor: pointer;
+      background: #fff;
+      color: #222;
+      transition: 0.2s;
+    }
+    .btn:hover { transform: translateY(-3px); }
+
+    /* Section 2: Org Info */
+    .left { flex: 2; display: flex; flex-direction: column; }
+    .thumbnail img {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+    }
+    .info { padding: 25px; line-height: 1.6; font-size: 15px; flex-grow: 1; }
+
+    .right {
+      flex: 1;
+      background: #faf6ed;
+      padding: 25px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .button {
+      display: block;
+      margin: 10px 0;
+      padding: 12px 20px;
+      text-align: center;
+      background: #fff;
+      border: 2px solid #0d4a7a;
+      border-radius: 6px;
+      width: 80%;
+      font-weight: bold;
+      color: #0d4a7a;
+      transition: 0.3s;
+      text-decoration: none;
+    }
+    .button:hover { background: #0d4a7a; color: #fff; }
+
+/* Section 2: Org Info */
+    .left { flex: 2; display: flex; flex-direction: column; }
+    .thumbnail img {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+    }
+    .info { padding: 25px; line-height: 1.6; font-size: 15px; flex-grow: 1; }
+
+    .right {
+      flex: 1;
+      background: #faf6ed;
+      padding: 25px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .button {
+      display: block;
+      margin: 10px 0;
+      padding: 12px 20px;
+      text-align: center;
+      background: #fff;
+      border: 2px solid #0d4a7a;
+      border-radius: 6px;
+      width: 80%;
+      font-weight: bold;
+      color: #0d4a7a;
+      transition: 0.3s;
+      text-decoration: none;
+    }
+    .button:hover { background: #0d4a7a; color: #fff; }
+
+/* Section 2: Org Info */
+    .left { flex: 2; display: flex; flex-direction: column; }
+    .thumbnail img {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+    }
+    .info { padding: 25px; line-height: 1.6; font-size: 15px; flex-grow: 1; }
+
+    .right {
+      flex: 1;
+      background: #faf6ed;
+      padding: 25px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .button {
+      display: block;
+      margin: 10px 0;
+      padding: 12px 20px;
+      text-align: center;
+      background: #fff;
+      border: 2px solid #0d4a7a;
+      border-radius: 6px;
+      width: 80%;
+      font-weight: bold;
+      color: #0d4a7a;
+      transition: 0.3s;
+      text-decoration: none;
+    }
+    .button:hover { background: #0d4a7a; color: #fff; }
+
+/* Section 2: Org Info */
+    .left { flex: 2; display: flex; flex-direction: column; }
+    .thumbnail img {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+    }
+    .info { padding: 25px; line-height: 1.6; font-size: 15px; flex-grow: 1; }
+
+    .right {
+      flex: 1;
+      background: #faf6ed;
+      padding: 25px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .button {
+      display: block;
+      margin: 10px 0;
+      padding: 12px 20px;
+      text-align: center;
+      background: #fff;
+      border: 2px solid #0d4a7a;
+      border-radius: 6px;
+      width: 80%;
+      font-weight: bold;
+      color: #0d4a7a;
+      transition: 0.3s;
+      text-decoration: none;
+    }
+    .button:hover { background: #0d4a7a; color: #fff; }
+
+
+    /* Section 3: Video */
+    .media-box {
+      flex: 1;
+      background: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      aspect-ratio: 1/1;
+    }
+    .media-box video,
+    .media-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .content-box {
+      flex: 2;
+      padding: 25px;
+      line-height: 1.6;
+      font-size: 15px;
+    }
+/* Section 3: Video */
+    .media-box {
+      flex: 1;
+      background: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      aspect-ratio: 1/1;
+    }
+    .media-box video,
+    .media-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .content-box {
+      flex: 2;
+      padding: 25px;
+      line-height: 1.6;
+      font-size: 15px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Section 3 -->
+  <div class="container">
+    <div class="media-box">
+      <video autoplay muted loop>
+        <source src="Vid.mov" type="video/mp4">
+        Your browser does not support video.
+      </video>
+    </div>
+    <div class="content-box">
+      <h2>About Our Organization</h2>
+      <p>Heyy 👋 welcome!
+Honestly, this page feels best if you open it on your laptop or iPad, biar enak diliat and gampang dipakai.
+
+This isn’t some random page, it’s something we made for UAJY with a lot of love ❤️, late-night ideas, and of course… powered by Indomie 🍜 (ya namanya juga anak kampus hehe).
+
+Hope you enjoy looking around here, because it’s made simple, warm, and from the heart — just like how we live our days at UAJY ✨.</p>
+    </div>
+  </div>
+  <!-- Section 1 -->
+  <h1>More Atma Jaya FBE stuff</h1>
+  <div class="container">
+    <div class="info-box">
+      <h3>About this Idea</h3>
+      <p>Ultras Rossoneri Ezra Prasetya
+Faculty of Business and Management Economics
+Student ID (NPM): 250328846
+
+I created this 5-in-1 website to integrate Bookshelf, SIAKAD, SIATMA, SIKMA, and Web Kuliah into a single platform. The purpose is to simplify access, improve efficiency, and save time for students by gathering all essential academic systems in one page. This idea comes from my personal initiative as a student who values practicality and productivity in managing academic activities.</p>
+    </div>
+    <div class="button-box">
+      <h2>Quick Access</h2>
+      <button class="btn" onclick="goTo('https://bookshelf.vitalsource.com/')">Bookshelf</button>
+      <button class="btn" onclick="goTo('https://siakad.uajy.ac.id')">SIAKAD</button>
+      <button class="btn" onclick="goTo('https://siatma.uajy.ac.id')">SIATMA</button>
+      <button class="btn" onclick="goTo('https://kuliah.uajy.ac.id')">KULIAH</button>
+      <button class="btn" onclick="goTo('https://sikma.uajy.ac.id')">SIKMA</button>
+    </div>
+  </div>
+
+  <!-- Section 2 -->
+  <div class="container">
+    <div class="left">
+      <div class="thumbnail"><img src="S.jpg" alt="Organization Thumbnail"></div>
+      <div class="info">
+        <h2>Tentang SEMA</h2>
+        <p>🔥 SEMA FBE UAJY atau Senat Mahasiswa Fakultas Bisnis dan Ekonomika Universitas Atma Jaya Yogyakarta adalah organisasi mahasiswa yang jadi wadah aspirasi, kreativitas, dan pengembangan diri seluruh mahasiswa FBE! 🎓✨ SEMA hadir untuk menyalurkan ide dan kebutuhan mahasiswa dalam bidang minat & bakat 🎤⚽, penalaran 🧠📚, serta kesejahteraan 💙.
+
+Setiap tahunnya, SEMA ngadain program seru dan bermanfaat, mulai dari Pembekalan, Ecosport, Economics Maker Day, BAKMAS (Bakti Masyarakat), E-Project, sampai LKTM 🚀🔥. Semua kegiatan ini dirancang buat ningkatin skill, solidaritas, dan pengalaman mahasiswa di dalam maupun luar kampus.
+
+Keanggotaan terbuka untuk mahasiswa aktif FBE, khususnya semester awal, dengan proses seleksi yang harus dijalani. Struktur organisasi juga jelas, mulai dari pengurus inti (ketua, sekretaris, bendahara) sampai pengurus harian (kepala bidang, biro, dan koordinator).
+
+📍 Fakultas Bisnis dan Ekonomika UAJY, Jl. Babarsari No. 43, Sleman, Yogyakarta
+📧 fbe@uajy.ac.id</p>
+      </div>
+    </div>
+    <div class="right">
+      <h2>For more information</h2>
+      <button class="button" onclick="goTo('https://www.instagram.com/semafbeuajy/')">instagram</button>
+      <a href="#" class="button">Contact Us</a>
+    </div>
+  </div>
+
+<!-- Section 2 -->
+  <div class="container">
+    <div class="left">
+      <div class="thumbnail"><img src="I.jpeg.png" alt="Organization Thumbnail"></div>
+      <div class="info">
+        <h2>Tentang BPM</h2>
+        <p>🔥 BPM FBE UAJY atau Badan Perwakilan Mahasiswa Fakultas Bisnis dan Ekonomika Universitas Atma Jaya Yogyakarta adalah lembaga legislatif mahasiswa di FBE UAJY! 🎓✨ Bisa dibilang, BPM ini “parlemen”-nya mahasiswa yang jadi lembaga tertinggi di fakultas.
+
+Tugas utama BPM adalah ngawasin kinerja lembaga eksekutif mahasiswa 🧐, nampung dan menyalurin aspirasi mahasiswa soal kebijakan fakultas 📢, serta koordinasi antar organisasi biar semua program jalan bareng dan selaras.
+
+Setiap periode, BPM selalu ngadain kegiatan penting kayak Pramuka-Muker buat musyawarah program kerja, Pembekalan untuk anggota baru 💡, Public Hearing biar mahasiswa bisa langsung dialog sama fakultas 🎤, sampai Konsolidasi & Evaluasi buat ngecek jalannya program kerja. Ada juga kegiatan sosial, studi banding, dan fungsionaris yang bikin kekompakan makin kuat 💪🔥.
+
+Keanggotaan terbuka buat mahasiswa aktif FBE yang punya semangat tinggi! 🚀 Caranya lewat open recruitment dengan tahap seleksi dan pembekalan. Jadi, selain berorganisasi, kamu juga bakal dapat banyak pengalaman berharga.
+
+📍 Fakultas Bisnis & Ekonomika UAJY, Jl. Babarsari No. 43, Sleman, Yogyakarta
+📧 Info lebih lanjut bisa hubungi lewat email atau sosmed resmi BPM FBE UAJY.
+
+Bareng BPM FBE UAJY, aspirasi mahasiswa bukan cuma didengar, tapi juga diperjuangkan! ✨🔥 </p>
+      </div>
+    </div>
+    <div class="right">
+      <h2>For more information</h2>
+      <button class="button" onclick="goTo('https://www.instagram.com/bpmfbeuajy/')">instagram</button>
+      <a href="#" class="button">Contact Us</a>
+    </div>
+  </div>
+
+  <!-- Section 2 -->
+  <div class="container">
+    <div class="left">
+      <div class="thumbnail"><img src="M.png" alt="Organization Thumbnail"></div>
+      <div class="info">
+        <h2>Tentang HMPSA</h2>
+        <p>🔥 HMPSA FBE UAJY (Himpunan Mahasiswa Program Studi Akuntansi Fakultas Bisnis dan Ekonomika Universitas Atma Jaya Yogyakarta) adalah organisasi mahasiswa jurusan Akuntansi yang jadi wadah utama buat mahasiswa akuntansi berkembang, berkreasi, dan berprestasi! 🎓📊💼
+
+Di HMPSA, kamu bisa nemuin banyak pengalaman berharga, mulai dari belajar teamwork, kepemimpinan, sampai bikin acara besar yang berimpact luas. Setiap tahun ada rangkaian kegiatan keren seperti Accounting Week ✨ yang berisi Konferensi Mahasiswa Akuntansi (KMA), Atma Jaya Student Accounting Competition (ASAC), dan Accounting Action Day (AAD). Selain itu, HMPSA juga rutin ngadain Atma Jaya Accounting Competition (AAC) buat SMA se-Indonesia, seminar nasional, bakti sosial, diskusi internal, sampai acara kreatif kayak Accounting Race, Gathering Night, Pesta Rakyat, dan Tutup Tahun 🎉🔥.
+
+Jadi anggota HMPSA itu lebih dari sekadar titel organisasi. Kamu bakal dapet kesempatan buat kenal lebih dekat dunia akuntansi, bangun networking dengan mahasiswa akuntansi dari kampus lain, bahkan ikut kompetisi tingkat nasional. 💡✨ HMPSA juga ngajarin kamu buat profesional, disiplin, sekaligus tetap fun bareng keluarga besar Akuntansi UAJY.
+
+📍 Sekretariat HMPSA ada di Fakultas Bisnis & Ekonomika UAJY, Jl. Babarsari No. 43, Sleman, Yogyakarta.
+📧 Info lebih lanjut bisa hubungi lewat email atau sosial media resmi HMPSA.
+
+Bersama HMPSA FBE UAJY, mahasiswa akuntansi bukan cuma belajar menghitung angka, tapi juga belajar bikin karya dan sejarah! 🚀🔥</p>
+      </div>
+    </div>
+    <div class="right">
+      <h2>For more information</h2>
+      <button class="button" onclick="goTo('https://www.instagram.com/hmpsafbeuajy/')">instagram</button>
+      <a href="#" class="button">Contact Us</a>
+    </div>
+  </div>
+
+<!-- Section 2 -->
+  <div class="container">
+    <div class="left">
+      <div class="thumbnail"><img src="G.png" alt="Organization Thumbnail"></div>
+      <div class="info">
+        <h2>Tentang HMPSM</h2>
+        <p>✨🔥 HMPS Manajemen FBE UAJY (Himpunan Mahasiswa Program Studi Manajemen Fakultas Bisnis dan Ekonomika Universitas Atma Jaya Yogyakarta) adalah organisasi mahasiswa jurusan Manajemen yang jadi rumah buat semua ide, bakat, dan aksi kreatif mahasiswa Manajemen! 🎓📈
+
+Di HMPSM, kamu nggak cuma belajar teori manajemen di kelas, tapi juga dapat panggung buat nunjukin skill, bikin acara keren, sampai networking bareng mahasiswa dari jurusan lain maupun profesional di luar kampus. 🚀
+
+Setiap tahun, HMPSM hadir dengan event-event ikonik yang selalu ditunggu: ada Management Action, Management Competition, Innovation Day, sampai Management English Day 🌍✨. Kamu juga bisa ikut Seminar Nasional, Talkshow, Capacity Building, Management Visit, dan Study Club — semuanya dirancang biar mahasiswa Manajemen UAJY makin siap bersaing di dunia nyata. 🔥
+
+Selain acara formal yang penuh ilmu, ada juga kegiatan seru yang memperkuat solidaritas antar mahasiswa. HMPSM percaya kalau jadi mahasiswa Manajemen itu nggak cuma soal teori dan angka, tapi juga soal leadership, teamwork, dan semangat buat berkembang bareng! 💡💼
+
+📍 Sekretariat HMPSM ada di Fakultas Bisnis & Ekonomika UAJY, Jl. Babarsari No. 43, Sleman, Yogyakarta
+📧 Info & kegiatan terbaru bisa dicek lewat sosial media resmi HMPSM FBE UAJY
+
+Bersama HMPS Manajemen FBE UAJY, kamu nggak cuma belajar jadi manajer masa depan… tapi juga jadi changemaker yang berani bikin gebrakan nyata! ✨🔥🚀</p>
+      </div>
+    </div>
+    <div class="right">
+      <h2>For more information</h2>
+      <button class="button" onclick="goTo('https://www.instagram.com/hmpsmfbeuajy/')">instagram</button>
+      <a href="#" class="button">Contact Us</a>
+    </div>
+  </div>
+
+<!-- Section 2 -->
+  <div class="container">
+    <div class="left">
+      <div class="thumbnail"><img src="U.png" alt="Organization Thumbnail"></div>
+      <div class="info">
+        <h2>Tentang HMPSEP</h2>
+        <p>📊✨ HMPS Ekonomi Pembangunan FBE UAJY (Himpunan Mahasiswa Program Studi Ekonomi Pembangunan Fakultas Bisnis dan Ekonomika Universitas Atma Jaya Yogyakarta) adalah organisasi mahasiswa jurusan Ekonomi Pembangunan yang jadi ruang kreativitas, solidaritas, dan aktualisasi diri mahasiswa EP! 🎓💡
+
+Lewat HMPS EP, mahasiswa bisa mengasah kemampuan analisis, kepemimpinan, dan organisasi. Di sini kamu nggak cuma belajar teori ekonomi pembangunan di kelas, tapi juga langsung praktek lewat kegiatan nyata. HMPS EP rutin ngadain acara keren seperti Seminar Ekonomi, Training, Lomba Karya Ilmiah, Workshop, Kegiatan Sosial, Pengabdian Masyarakat, dan Study Club ✨🔥.
+
+Nggak berhenti di situ, ada juga event tahunan yang memperkuat kebersamaan kayak Gathering, Fun Games, dan Capacity Building. Jadi anggota HMPS EP berarti kamu bagian dari keluarga besar mahasiswa Ekonomi Pembangunan yang saling support, kompak, dan semangat berkembang bareng. 🚀
+
+📍 Sekretariat HMPS EP ada di Fakultas Bisnis & Ekonomika UAJY, Jl. Babarsari No. 43, Sleman, Yogyakarta
+📧 Info kegiatan dan update terbaru bisa dicek lewat sosial media resmi HMPS EP FBE UAJY
+
+Bersama HMPS Ekonomi Pembangunan FBE UAJY, mahasiswa EP bukan cuma belajar tentang angka & teori… tapi juga belajar bikin perubahan nyata untuk masyarakat dan bangsa! 🌍🔥✨</p>
+      </div>
+    </div>
+    <div class="right">
+      <h2>For more information</h2>
+      <button class="button" onclick="goTo('https://www.instagram.com/hmpsepfbeuajy/')">instagram</button>
+      <a href="#" class="button">Contact Us</a>
+    </div>
+  </div>
+
+  <!-- Section 3 -->
+  <div class="container">
+    <div class="media-box">
+      <video autoplay muted loop>
+        <source src="Vid.mov" type="video/mp4">
+        Your browser does not support video.
+      </video>
+    </div>
+    <div class="content-box">
+      <h2>Thanks!</h2>
+      <p>Big thanks for stopping by and checking out this page 💙. It really means a lot knowing that you’re here, sharing a little piece of UAJY spirit with us.
+
+This page was made with love ❤️, a bunch of ideas 💡, and (not gonna lie) fueled by Indomie sessions 🍜 late at night.
+
+Hope it brings a smile, some good vibes, and a reminder that UAJY is more than just a campus — it’s a family, a journey, and a place full of stories worth sharing ✨.
+
+So, from us to you: terima kasih banyak, stay awesome, and keep the UAJY spirit alive! 🙌</p>
+    </div>
+  </div>
+
+  <script>
+    function goTo(url) { window.location.href = url; }
+  </script>
+</body>
+</html>

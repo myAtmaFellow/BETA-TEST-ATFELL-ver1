@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>10 Buttons Page</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #1e73be; /* change this to your background */
+      font-family: "Segoe UI", Arial, sans-serif;
+    }
+
+    .button-container {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      width: 85%;
+      max-width: 500px;
+    }
+
+    .btn {
+      background-color: #fdfbf6;
+      color: #333;
+      padding: 18px;
+      border: none;
+      border-radius: 12px; /* nice curved edges */
+      font-size: 18px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: 0.3s;
+      text-align: center;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    }
+
+    .btn:hover {
+      background-color: #eae7e2;
+    }
+  </style>
+</head>
+<body>
+  <div class="button-container">
+    <button class="btn">Button 1</button>
+    <button class="btn">Button 2</button>
+    <button class="btn">Button 3</button>
+    <button class="btn">Button 4</button>
+    <button class="btn">Button 5</button>
+    <button class="btn">Button 6</button>
+    <button class="btn">Button 7</button>
+    <button class="btn">Button 8</button>
+    <button class="btn">Button 9</button>
+    <button class="btn">Button 10</button>
+  </div>
+</body>
+</html>

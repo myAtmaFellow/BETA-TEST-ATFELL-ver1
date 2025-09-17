@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Video + Info Box</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: #0d4a7a; /* blue background */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      display: flex;
+      width: 90%;
+      max-width: 1000px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+      overflow: hidden;
+    }
+
+    /* Left: Video/GIF box */
+    .media-box {
+      flex: 1;
+      background: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      aspect-ratio: 1 / 1; /* keeps it square */
+      overflow: hidden;
+    }
+
+    .media-box video,
+    .media-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Right: White content box */
+    .content-box {
+      flex: 2;
+      background: #fff;
+      padding: 25px;
+      font-size: 15px;
+      line-height: 1.6;
+      overflow-y: auto;
+    }
+
+    .content-box h2 {
+      margin-top: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Left box: add GIF or looping video -->
+    <div class="media-box">
+      <!-- Example: looping video -->
+      <video autoplay muted loop>
+        <source src="sample.mp4" type="video/mp4">
+        Your browser does not support video.
+      </video>
+
+      <!-- Or you can use a GIF instead:
+      <img src="sample.gif" alt="GIF Thumbnail">
+      -->
+    </div>
+
+    <!-- Right box: add text or info -->
+    <div class="content-box">
+      <h2>About Our Organization</h2>
+      <p>
+        This is the information section. You can add a description, mission, 
+        vision, announcements, or anything else here. The box scrolls if there’s 
+        a lot of text, so it won’t break the layout.
+      </p>
+    </div>
+  </div>
+
+</body>
+</html>
