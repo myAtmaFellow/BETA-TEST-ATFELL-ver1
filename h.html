@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Banner Buttons</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #1e73be; /* change background here */
+      font-family: "Segoe UI", Arial, sans-serif;
+    }
+
+    .button-container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px; /* space between buttons */
+      width: 90%;
+      max-width: 600px; /* larger container for banners */
+    }
+
+    .btk {
+      background-color: #fdfbf6;
+      border: none;
+      border-radius: 12px;
+      padding: 0; /* no padding so image fits perfectly */
+      cursor: pointer;
+      overflow: hidden; /* keeps image inside rounded corners */
+      transition: 0.3s;
+      height: 100px; /* adjust height for banner size */
+    }
+
+    .btn:hover {
+      background-color: #e6e3dd;
+    }
+
+    .btk img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* image fills button area like a banner */
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="button-container">
+    <button class="btn"><img src="Hm.png" alt="Button 1"></button>
+    <button class="btn"><img src="H.png" alt="Button 2"></button>
+    <button class="btn"><img src="Hmk .png" alt="Button 3"></button>
+    <button class="btn"><img src="Hmps.png" alt="Button 4"></button>
+    <button class="btn"><img src="Hmm.png" alt="Button 5"></button>
+  </div>
+</body>
+</html>

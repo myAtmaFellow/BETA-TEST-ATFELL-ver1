@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Campus Organization Info</title>
+  <style>
+.thumbnail {
+  background: #f1a71e; /* fallback color */
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 12px;
+  overflow: hidden; /* keeps image inside box */
+}
+
+.thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* crops image nicely like YouTube banner */
+}
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: url("UAJY.jpeg") no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .container {
+      display: flex;
+      width: 90%;
+      max-width: 1100px;
+      margin: auto;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+      overflow: hidden;
+      animation: fadeSlide 1s ease;
+    }
+
+    /* Animation */
+    @keyframes fadeSlide {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Left section */
+    .left {
+      flex: 2;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .thumbnail {
+      background: #f1a71e;
+      height: 120px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 20px;
+      font-weight: bold;
+      color: white;
+      border-top-left-radius: 12px;
+    }
+
+    .info {
+      background: #ffffff;
+      padding: 25px;
+      flex-grow: 1;
+      overflow-y: auto;
+      line-height: 1.6;
+      font-size: 15px;
+    }
+
+    /* Right section */
+    .right {
+      flex: 1;
+      background: #faf6ed;
+      padding: 25px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-top-right-radius: 12px;
+    }
+
+    .right h2 {
+      margin-bottom: 25px;
+      font-size: 18px;
+    }
+
+    .button {
+      display: block;
+      margin: 10px 0;
+      padding: 12px 20px;
+      text-align: center;
+      text-decoration: none;
+      background: #fff;
+      color: #0d4a7a;
+      border: 2px solid #0d4a7a;
+      border-radius: 6px;
+      width: 80%;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .button:hover {
+      background: #0d4a7a;
+      color: #fff;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+      color: #fff;
+      background: rgba(0, 0, 0, 0.6);
+      margin-top: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Left Box -->
+    <div class="left">
+      <div class="thumbnail">
+  <img src="S.jpg" alt="Organization Thumbnail">
+</div>
+      <div class="info">
+        <h2>Tentang SEMA</h2>
+        <p>
+          🔥 SEMA FBE UAJY atau Senat Mahasiswa Fakultas Bisnis dan Ekonomika Universitas Atma Jaya Yogyakarta adalah organisasi mahasiswa yang jadi wadah aspirasi, kreativitas, dan pengembangan diri seluruh mahasiswa FBE! 🎓✨ SEMA hadir untuk menyalurkan ide dan kebutuhan mahasiswa dalam bidang minat & bakat 🎤⚽, penalaran 🧠📚, serta kesejahteraan 💙.
+
+Setiap tahunnya, SEMA ngadain program seru dan bermanfaat, mulai dari Pembekalan, Ecosport, Economics Maker Day, BAKMAS (Bakti Masyarakat), E-Project, sampai LKTM 🚀🔥. Semua kegiatan ini dirancang buat ningkatin skill, solidaritas, dan pengalaman mahasiswa di dalam maupun luar kampus.
+
+Keanggotaan terbuka untuk mahasiswa aktif FBE, khususnya semester awal, dengan proses seleksi yang harus dijalani. Struktur organisasi juga jelas, mulai dari pengurus inti (ketua, sekretaris, bendahara) sampai pengurus harian (kepala bidang, biro, dan koordinator).
+
+📍 Fakultas Bisnis dan Ekonomika UAJY, Jl. Babarsari No. 43, Sleman, Yogyakarta
+📧 fbe@uajy.ac.id
+        </p>
+      </div>
+    </div>
+
+    <!-- Right Box -->
+    <div class="right">
+      <h2>For more information</h2>
+      <button class="button" style="--i:1" onclick="goTo('https://bookshelf.vitalsource.com/')">Instagram</button>
+      <a href="#" class="button">Instagram</a>
+      <a href="#" class="button">Contact Us</a>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 Campus Organization - All Rights Reserved
+  </footer>
+<script>
+function goTo(url) {
+      setTimeout(() => { window.location.href = url; }, 220);
+    }
+</script>
+
+</body>
+</html>
